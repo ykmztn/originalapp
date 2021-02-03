@@ -1,0 +1,60 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+        <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.label :male %>
+    <%= f.radio_button :gender, :male %>
+    <%= f.label :female %>
+    <%= f.radio_button :gender, :female %>
+    <%= f.label :others %>
+    <%= f.radio_button :gender, :others %>
+    <% f.label :noanswer %> No answer
+    <%= f.radio_button :gender, :noanswer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <% f.label :teens %> 10's
+    <%= f.radio_button :age, :teens %>
+    <% f.label :twenties %>  20's
+    <%= f.radio_button :age, :twenties %>
+    <% f.label :thirties %> 30's
+    <%= f.radio_button :age, :thirties %>
+    <% f.label :forties %> 40's
+    <%= f.radio_button :age, :forties %>
+    <% f.label :forties %> Others
+    <%= f.radio_button :age, :more %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
