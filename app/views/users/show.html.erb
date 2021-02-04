@@ -1,9 +1,11 @@
 <div class="contents row">
   <p><%= @nickname %>さんの投稿一覧</p>
   <% @poses.each do |pose| %>
-    <div class="content_post" style="background-image: url(<%= pose.image %>);">
+    <div>
+     <%= image_tag pose.image, class: "item-img" %>
       <p><%= pose.title %></p>
-      <span class="name"><%= pose.title %></span>
+      <p><span class="name"><%= pose.effect.name %></span></p>
+      <p><span class="name"><%= pose.intensity.name %></span></p>
     </div>
   <% end %>
 </div>

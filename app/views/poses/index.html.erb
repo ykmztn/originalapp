@@ -1,4 +1,10 @@
 <h2>index</h2>
 
- <%# <%= image_tag @poses.image, class: 'message-image' if @poses.image.attached? %> %>
- <%# <%= @pose.title %> %>
+<% @poses.each do |pose| %>
+    <div>
+     <%= image_tag pose.image, class: "hoge"  %>
+      <p><%= pose.title %></p>
+      <p><span class="name"><%= pose.effect.name %></span></p>
+      <p><span class="name"><%= pose.intensity.name %></span></p>
+    </div>
+  <% end %>
