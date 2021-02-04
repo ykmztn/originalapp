@@ -1,0 +1,30 @@
+<%= form_with model: pose, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "ポーズの名前" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :effect, "効果" %><br />
+    <%= f.text_area :effect, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minute, "所要時間" %><br />
+    <%= f.text_area :minute, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :intensity, "強度" %><br />
+    <%= f.text_area :intensity, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "ポーズの画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
