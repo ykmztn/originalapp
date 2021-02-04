@@ -11,7 +11,7 @@ class PosesController < ApplicationController
   def create
     @pose = Pose.new(pose_params)
     if @pose.save
-      redirect_to root_path
+      redirect_to "/users/#{current_user.id}"
     else
       render :new
     end
