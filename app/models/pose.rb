@@ -1,4 +1,7 @@
 class Pose < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :intensity
+  belongs_to :effect
 
   belongs_to :user
   has_many :comments
@@ -10,4 +13,10 @@ class Pose < ApplicationRecord
     validates :minute
     validates :image
   end
+
+  with_options numericality: { other_than: 1 } do
+    validates :genre_id
+    validates :effect_id
+  end
+  
 end
