@@ -1,0 +1,27 @@
+<h1>
+  検索結果
+</h1>
+<%# 検索結果の個数で条件分岐 %>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+    <br>
+      <%= image_tag result.image %>
+      <br>
+      ポーズ名  <%= result.title %>
+      <br>
+      効果  <%= result.effect.name %>
+      <br>
+      所要時間  <%= result.minute %>  分
+      <br>
+      強度 <%= result.intensity.name %>
+      <br>
+    </li>
+  <% end %>
+<% else %>
+  該当するポーズはありません
+<% end %>
+<br>
+<%= link_to 'トップページへ戻る', root_path %>
