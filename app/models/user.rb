@@ -8,4 +8,11 @@ class User < ApplicationRecord
 
   has_many :poses
   has_many :comments
+
+  with_options presence: true do
+    validates :nickname
+    validates :password
+    validates :gender
+    validates :age
+  end
 end

@@ -8,4 +8,10 @@ class PosesController < ApplicationController
     @pose = Pose.new
   end
 
+  private
+
+  def pose_params
+    params.require(:pose).permit(:title, :image, :effect_id, :minute, :intensity_id).merge(user_id: current_user.id)
+  end
+
 end
