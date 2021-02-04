@@ -5,18 +5,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :effect, "効果" %><br />
-    <%= f.text_area :effect, class: :form__text %>
+    <%= f.label :effect, "効果" %>
+    <%= f.collection_select(:effect_id, Effect.all, :id, :name, {}, {class:"effect-select"}) %>
   </div>
 
   <div class="field">
-    <%= f.label :minute, "所要時間" %><br />
-    <%= f.text_area :minute, class: :form__text %>
+    <%= f.label :minute, "所要時間(分）" %><br />
+    <%= f.text_field :minute %>
   </div>
 
   <div class="field">
-    <%= f.label :intensity, "強度" %><br />
-    <%= f.text_area :intensity, class: :form__text %>
+  <%= f.label :intensity, "強度  1 (弱) → 5 (強)" %>
+  <%= f.collection_select(:intensity_id, Intensity.all, :id, :name, {}, {class:"intensity-select"}) %>
   </div>
 
   <div class="field">
