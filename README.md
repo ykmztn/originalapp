@@ -21,7 +21,7 @@
 | Column       | Type       | Options                         |
 | ------------ | ---------- | ------------------------------- |
 | title        | string     | null: false                     |
-| effect_id    | string     | null: false                     |
+| effect_id    | integer    | null: false                     |
 | minute       | integer    | null: false                     |
 | intensity_id | integer    | null: false                     |
 | user         | references | null: false, foreign_key: true  |

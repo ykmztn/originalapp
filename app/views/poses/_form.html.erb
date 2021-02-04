@@ -1,0 +1,30 @@
+<%= form_with model: pose, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "ポーズの名前" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :effect, "効果" %>
+    <%= f.collection_select(:effect_id, Effect.all, :id, :name, {}, {class:"effect-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minute, "所要時間(分）" %><br />
+    <%= f.text_field :minute %>
+  </div>
+
+  <div class="field">
+  <%= f.label :intensity, "強度  1 (弱) → 5 (強)" %>
+  <%= f.collection_select(:intensity_id, Intensity.all, :id, :name, {}, {class:"intensity-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "ポーズの画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
