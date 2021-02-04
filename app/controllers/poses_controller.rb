@@ -8,6 +8,15 @@ class PosesController < ApplicationController
     @pose = Pose.new
   end
 
+  def create
+    @pose = Pose.new(pose_params)
+    if @pose.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
   private
 
   def pose_params

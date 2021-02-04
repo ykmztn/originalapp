@@ -15,8 +15,8 @@ class Pose < ApplicationRecord
   end
 
   with_options numericality: { other_than: 1 } do
-    validates :genre_id
+    validates :intensity_id
     validates :effect_id
   end
-  
+
 end
