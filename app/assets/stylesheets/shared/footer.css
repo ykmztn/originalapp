@@ -1,0 +1,20 @@
+.footer {
+  width: 100vw;
+  height: 10vh;
+  padding: 5vh 0;
+  color: #FFF;
+  background-color: #000000;
+  /* background-color: #2f4f4f; */
+  text-align: center;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 5vh; */
+  font-size: 14px;
+}
+
+.footer>p {
+  font-size: 12px;
+}
