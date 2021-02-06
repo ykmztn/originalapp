@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.index-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  /* background-color: #2f4f4f; */
+  color: white;
+}
+
+.header-left{
+  font-size: 50px;
+}
+
+.header-right{
+  color: white;
+  align-items: center;
+  display: flex;
+
+}
+
+.user-nav-b,
+.user-nav-a{ 
+  color: white;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding: 8px;
+  text-decoration: none;
+  border: solid 2px white;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
