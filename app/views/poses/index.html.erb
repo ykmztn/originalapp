@@ -1,4 +1,8 @@
 <%= render "shared/header" %>
+<%= render "shared/background" %>
+
+<body>
+<div class="main-content">
 <h2>index</h2>
 
 <% @poses.each do |pose| %>
@@ -12,20 +16,22 @@
   <% end %>
 
 <h3>serch</h3>
-<%= search_form_for @p, url: poses_search_path do |f| %>
-  <%= f.label :title_eq, 'ポーズ名' %>
-  <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: '指定なし' %>
-  <br>
-  <%= f.label :effect_id_eq, '効果' %>
-  <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
-  <%= f.label :minute_lteq, '所要時間' %>
-  <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: '指定なし' %>
-  <br>
-  <%= f.label :intensity_id_eq, '強度' %>
-  <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
-  <%= f.submit '検索' %>
-<% end %>
+  <%= search_form_for @p, url: poses_search_path do |f| %>
+   <%= f.label :title_eq, 'ポーズ名' %>
+   <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: '指定なし' %>
+   <br>
+   <%= f.label :effect_id_eq, '効果' %>
+   <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: '指定なし' %>
+   <br>
+   <%= f.label :minute_lteq, '所要時間' %>
+   <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: '指定なし' %>
+   <br>
+   <%= f.label :intensity_id_eq, '強度' %>
+   <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: '指定なし' %>
+   <br>
+   <%= f.submit '検索' %>
+ <% end %>
+</div>
+</body>
 
 <%= render "shared/footer" %>
