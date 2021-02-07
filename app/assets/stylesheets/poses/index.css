@@ -1,0 +1,34 @@
+.main-content{
+ display: flex;
+}
+
+.main-left{
+ flex-grow: 4;
+}
+
+.main-left-title{
+  color: white;
+  margin: 10px 70px;
+  border-radius: 10px;
+  background-color: black;
+  font-size: 40px;
+  text-align: center;
+
+  
+}
+
+.main-right{
+  flex-grow: 1;
+  border-radius: 10px;
+  background-color: white;
+  height: 60vh;
+  margin: 10px;
+  text-align: center;
+}
+
+.main-right-title{
+ color: black;
+ font-size: 40px;
+ text-align: center;
+ padding-bottom: 30px;
+}
