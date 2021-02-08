@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.registration-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+}
+
+.header-left{
+  font-size: 50px;
+}
+
+.header-right{
+  color: white;
+  display: flex;
+}
+
+.back-to-top{ 
+  color: white;
+  margin-left: 20px;
+  padding: 8px;
+  text-decoration: none;
+  border: solid 2px white;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
+.registration-main{
+  display: flex;
+
+}
+
+.registration-main-left{
+  flex-grow: 1;
+}
+
+.registration-title{
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.field{
+  text-align: center;
+  margin: 5px;
+}
+
+.actions{
+  text-align: center;
+  margin: 10px;
+}
+
+
+.registration-main-right{
+  flex-grow: 1;
+  background-color: #ffffff;
+  background-image: url(app/assets/images/door.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+

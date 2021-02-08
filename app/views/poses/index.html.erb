@@ -3,41 +3,38 @@
 
 <body>
 <div class="main-content">
- <div class="main-left">
- <h3 class="main-left-title">New Posts</h3>
- <% @poses.each do |pose| %>
-    <div class="all-posts">
-     <%= image_tag pose.image, class: "hoge"  %>
-      <p>ポーズ名<%= pose.title %></p>
+  <div class="main-left">
+    <h3 class="main-left-title">New Posts</h3>
+      <% @poses.each do |pose| %>
+      <%= image_tag pose.image, class: "pose__img"  %>
+      <p>ポーズ名 <%= pose.title %></p>
       <p>効果<span class="name"><%= pose.effect.name %></span></p>
       <p><span class="name">強度<%= pose.intensity.name %></span></p>
       <p><span class="name">所要時間<%= pose.minute %></span></p>
-    </div>
-  <% end %>
- </div>
+    <% end %>
+  </div>
 
-<div class="main-right">
+  <div class="main-right">
+    <h3 class="main-right-title">Search</h3>
+      <div class="search-item-select"> 
+       <%= search_form_for @p, url: poses_search_path do |f| %>
+        <%= f.label :title_eq, 'ポーズ名 :', class: "search-item-name"%>
+        <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: '指定なし' %><br>
+       <br>
+        <%= f.label :effect_id_eq, '効果 : ', class: "search-item-name" %>
+        <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: '指定なし' %><br>
+       <br>
+        <%= f.label :minute_lteq, '所要時間 : ', class: "search-item-name"  %>
+        <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: '指定なし' %><br>
+       <br>
+        <%= f.label :intensity_id_eq, '強度 : ', class: "search-item-name" %>
+        <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: '指定なし' %><br>
+       <br>
+        <%= f.submit 'Search' %>
+       <% end %>
+      </div>
+  </div>
 
-
-<h3 class="main-right-title">Search</h3>
- <div class="search-item-select"> 
-  <%= search_form_for @p, url: poses_search_path do |f| %>
-   <%= f.label :title_eq, 'ポーズ名 :', class: "search-item-name"%>
-   <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: '指定なし' %><br>
-   <br>
-   <%= f.label :effect_id_eq, '効果 : ', class: "search-item-name" %>
-   <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: '指定なし' %><br>
-   <br>
-   <%= f.label :minute_lteq, '所要時間 : ', class: "search-item-name"  %>
-   <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: '指定なし' %><br>
-   <br>
-   <%= f.label :intensity_id_eq, '強度 : ', class: "search-item-name" %>
-   <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: '指定なし' %><br>
-   <br>
-   <%= f.submit 'Search' %>
- </div>
- <% end %>
- </div>
 </div>
 </body>
 

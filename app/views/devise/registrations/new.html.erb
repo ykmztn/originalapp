@@ -1,11 +1,25 @@
-<h2>Sign up</h2>
+<header class='registration-page-header'>
+  <div class='header-left'>
+    Do Re: Me
+  </div>
+
+  <div class='header-right'>
+    <%= link_to "Back to Top Page", root_path, class: "back-to-top" %>
+  </div>
+
+</header>
+
+<body>
+<div class="registration-main">
+  <div class="registration-main-left">
+   <h4 class="registration-title">New Registration</h4>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
-        <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
+        <%= f.label :nickname %><br />
+        <%= f.text_field :nickname, autofocus: true %>
   </div>
 
   <div class="field">
@@ -56,5 +70,13 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+  </div>
+  
+  <div class="registration-main-right">
+   <%# <img src="app/assets/images/reglog.jpg" alt="door" class="door-img"> %>
+  </div>
+  
+</div>
+</body>
 
-<%= render "devise/shared/links" %>
+<%= render "shared/footer" %>
