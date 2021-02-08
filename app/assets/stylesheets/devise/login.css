@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.registration-page-header {
+.login-page-header {
   width: 100vw;
   padding: 2vh 15vw;
   display: flex;
@@ -29,16 +29,17 @@
   border-radius: 10px;/*角の丸み*/
 }
 
-.registration-main{
+.login-main{
   display: flex;
+  min-height: 100vh;
 
 }
 
-.registration-main-left{
+.login-main-left{
   flex-grow: 1;
 }
 
-.registration-title{
+.login-title{
   font-size: 30px;
   text-align: center;
   margin: 10px;
@@ -55,8 +56,7 @@
   margin: 10px;
 }
 
-
-.registration-main-right{
+.login-main-right{
   flex-grow: 1;
   background-color: #ffffff;
   background-image: url(app/assets/images/door.jpg);
@@ -65,3 +65,6 @@
   background-position: center center;
 }
 
+footer{
+  margin-top: auto;
+}
