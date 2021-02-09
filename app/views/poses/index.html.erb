@@ -5,13 +5,23 @@
 <div class="main-content">
   <div class="main-left">
     <h3 class="main-left-title">New Posts</h3>
-      <% @poses.each do |pose| %>
-      <%= image_tag pose.image, class: "pose__img"  %>
-      <p>ポーズ名 <%= pose.title %></p>
-      <p>効果<span class="name"><%= pose.effect.name %></span></p>
-      <p><span class="name">強度<%= pose.intensity.name %></span></p>
-      <p><span class="name">所要時間<%= pose.minute %></span></p>
-    <% end %>
+     <ul class="posts-wrapper">
+        <% @poses.each do |pose| %>
+        <li class="posted-item">
+
+          <div class="pose-img-content">
+            <%= image_tag pose.image, class: "pose__img"  %>
+          </div>
+
+          <div class="pose-detail">
+           <p><span class="posted-pose-title">ポーズ名 <%= pose.title %></p>
+           <p><span class="posted-pose-detail">効果<%= pose.effect.name %></span></p>
+           <p><span class="posted-pose-detail">強度<%= pose.intensity.name %></span></p>
+           <p><span class="posted-pose-detail">所要時間<%= pose.minute %> min</span></p>
+          </div>
+         </li>
+         <% end %>
+       </ul>
   </div>
 
   <div class="main-right">
