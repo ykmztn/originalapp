@@ -1,10 +1,60 @@
+<header class='registration-page-header'>
+  <div class='header-left'>
+    Do Re: Me
+  </div>
+
+  <div class='header-right'>
+    <%= link_to "Back to Top Page", root_path, class: "back-to-top" %>
+  </div>
+
+</header>
+
+<body>
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">ポーズ投稿</h2>
+      <h2 class="page-heading"> New Post</h2>
         <%# 部分テンプレートでフォームを表示する %>
       
-       <%= render partial: "form", locals: { pose: @pose } %>
+       <%= form_with model: @pose, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "Pose Name" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :effect, "effect" %>
+    <%= f.collection_select(:effect_id, Effect.all, :id, :name, {}, {class:"effect-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minute, "Required Time (min）" %><br />
+    <%= f.text_field :minute %>
+  </div>
+
+  <div class="field">
+  <%= f.label :intensity, "Intensity  1 (Low) → 5 (High)" %>
+  <%= f.collection_select(:intensity_id, Intensity.all, :id, :name, {}, {class:"intensity-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Pose Image" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Post", class: :form__btn  %>
+  </div>
+<% end %>
+
     </div>
   </div>
 </div>
+
+
+
+<footer>
+<%= render "shared/footer" %>
+</footer>
+
+</body>
