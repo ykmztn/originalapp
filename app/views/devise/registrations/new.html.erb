@@ -15,16 +15,33 @@
    <h4 class="registration-title">New Registration</h4>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+   <%# error-message表示 %>
+    <% if resource.errors.any? %>
+     <div id="error_sentence">
+     <h2><p style="color: red;"><%= pluralize(resource.errors.count, "error") %> prohibited this regostration from being saved:</h2>
+
+     <ul>
+       <% resource.errors.full_messages.each do |message| %>
+          <li><% message %></li>
+         <% end %>
+      </ul>
+      </div>
+    <% end %>
 
   <div class="field">
-        <%= f.label :nickname %><br />
-        <%= f.text_field :nickname, autofocus: true %>
+     <%= f.label :nickname %><br />
+     <%= f.text_field :nickname, autofocus: true %>
+      <% if resource.errors.include?(:nickname) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:nickname).first %>
+      <% end %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     <% if resource.errors.include?(:email) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:email).first %>
+      <% end %>
   </div>
 
   <div class="field">
@@ -33,11 +50,17 @@
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
+      <% if resource.errors.include?(:password) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:password).first %>
+      <% end %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <% if resource.errors.include?(:password_confirmation) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:password_confirmation).first %>
+      <% end %>
   </div>
 
   <div class="field">
@@ -50,6 +73,10 @@
     <%= f.radio_button :gender, :others %>
     <% f.label :noanswer %> No answer
     <%= f.radio_button :gender, :noanswer %>
+      <% if resource.errors.include?(:gender) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:gender).first %>
+      <% end %>
+      
   </div>
 
   <div class="field">
@@ -64,6 +91,9 @@
     <%= f.radio_button :age, :forties %>
     <% f.label :forties %> Others
     <%= f.radio_button :age, :more %>
+      <% if resource.errors.include?(:age) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:age).first %>
+      <% end %>
   </div>
 
   <div class="actions">
