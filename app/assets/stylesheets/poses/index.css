@@ -18,15 +18,18 @@
 .posts-wrapper{
   display: grid;
   gap: 20px;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50vh;
   margin-top: 10px;
   margin-bottom: 20px;
+  padding-left: 30px;
 }
 
 .posted-item{
   height: 45vh;
   width: 38vh;
   text-align: center;
+  justify-content: center;
 
 }
 
@@ -40,6 +43,12 @@
   border-radius: 10px;
 }
 
+.pose-detail{
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
 .posted-pose-title{
   font-size: 3vh;
   font-weight: bolder;
@@ -49,6 +58,7 @@
 .posted-pose-detail{
   font-size: 2vh;
 }
+
 .main-right{
   flex-grow: 1;
   border-radius: 10px;
@@ -64,4 +74,9 @@
  text-align: center;
  margin-top: 20px;
  padding-bottom: 30px;
+}
+
+
+footer{
+  margin-top: auto;
 }

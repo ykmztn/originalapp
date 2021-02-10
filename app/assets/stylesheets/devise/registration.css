@@ -31,12 +31,14 @@
 
 .registration-main{
   display: flex;
-  min-height: 100vh;
-
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .registration-main-left{
   flex-grow: 1;
+
 }
 
 .registration-title{
@@ -48,7 +50,8 @@
 
 .field{
   text-align: center;
-  margin: 5px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .actions{

@@ -31,12 +31,14 @@
 
 .login-main{
   display: flex;
-  min-height: 100vh;
-
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-main-left{
   flex-grow: 1;
+  
 }
 
 .login-title{

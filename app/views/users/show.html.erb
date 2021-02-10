@@ -1,13 +1,51 @@
-<div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <% @poses.each do |pose| %>
-    <div>
-     <%= image_tag pose.image, class: "item-img" %>
-      <p><%= pose.title %></p>
-      <p><span class="name"><%= pose.effect.name %></span></p>
-      <p><span class="name"><%= pose.intensity.name %></span></p>
-    </div>
-  <% end %>
+<body>
+<main>
+<header class='registration-page-header'>
+  <div class='header-left'>
+    Do Re: Me
+  </div>
+
+  <div class='header-right'>
+    <%= link_to "Back to Top Page", root_path, class: "back-to-top" %>
+  </div>
+
+</header>
+
+
+
+
+<div class="main-contents">
+
+  <h3 class="room-title"><%= @nickname %>'s YOGA Room</h3>
+  
+  <div class="room-search">
+    Search function
+  </div>
+
+  <ul class="pose-record">
+       <% @poses.each do |pose| %>
+        <li class="my-posted-item">
+
+      <div class="my-record-img-content">
+       <%= image_tag pose.image, class: "record-item-img" %>
+      </div>
+      <div class="my-record-detail">
+           <p><span class="my-record-title">ポーズ名 <%= pose.title %></p>
+           <p><span class="my-record-detail">効果<%= pose.effect.name %></span></p>
+           <p><span class="my-record-detail">強度<%= pose.intensity.name %></span></p>
+           <p><span class="my-record-detail">所要時間<%= pose.minute %> min</span></p>
+      </div>
+        </li>
+
+        <% end %>
+  </ul>
+
 </div>
 
-<%= link_to "TOPページ", root_path %>
+<footer>
+<%= render "shared/footer" %>
+</footer>
+
+</main>
+
+</body>

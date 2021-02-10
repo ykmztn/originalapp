@@ -3,7 +3,7 @@ class PosesController < ApplicationController
   before_action :search_product, only: [:index, :search]
 
   def index
-    @poses = Pose.all
+    @poses = Pose.all.order('created_at DESC')
     set_pose_column
   end
 
