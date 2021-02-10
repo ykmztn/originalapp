@@ -1,5 +1,5 @@
 class PosesController < ApplicationController
-
+  before_action :authenticate_user!, except: :index
   before_action :search_product, only: [:index, :search]
 
   def index
