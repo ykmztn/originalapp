@@ -48,6 +48,11 @@
   font-weight: bold;
 }
 
+.login-flash-message{
+  text-align: center;
+  color: red;
+}
+
 .field{
   text-align: center;
   margin: 5px;

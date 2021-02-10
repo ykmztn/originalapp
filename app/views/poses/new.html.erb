@@ -16,30 +16,60 @@
       <h2 class="page-heading"> New Post</h2>
         <%# 部分テンプレートでフォームを表示する %>
       
-       <%= form_with model: @pose, local: true do |f|%>
+ <%= form_with model: @pose, local: true do |f|%>
+   <%# error-message表示 %>
+
+    <% if @pose.errors.any? %>
+     <div id="error_sentence">
+     <h2><p style="color: red;"><%= pluralize(@pose.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+     <ul>
+       <% @pose.errors.full_messages.each do |message| %>
+          <li><% message %></li>
+         <% end %>
+      </ul>
+      </div>
+    <% end %>
+
+
   <div class="field">
     <%= f.label :title, "Pose Name" %><br />
     <%= f.text_field :title %>
+     <% if @pose.errors.include?(:title) %>
+       <p style="color: red;"><%= @pose.errors.full_messages_for(:title).first %>
+     <% end %>
   </div>
 
   <div class="field">
     <%= f.label :effect, "effect" %>
     <%= f.collection_select(:effect_id, Effect.all, :id, :name, {}, {class:"effect-select"}) %>
+    <% if @pose.errors.include?(:effect_id) %>
+       <p style="color: red;"><%= @pose.errors.full_messages_for(:effect_id).first %>
+     <% end %>
   </div>
 
   <div class="field">
     <%= f.label :minute, "Required Time (min）" %><br />
     <%= f.text_field :minute %>
+    <% if @pose.errors.include?(:minute) %>
+       <p style="color: red;"><%= @pose.errors.full_messages_for(:minute).first %>
+     <% end %>
   </div>
 
   <div class="field">
-  <%= f.label :intensity, "Intensity  1 (Low) → 5 (High)" %>
-  <%= f.collection_select(:intensity_id, Intensity.all, :id, :name, {}, {class:"intensity-select"}) %>
+    <%= f.label :intensity, "Intensity  1 (Low) → 5 (High)" %>
+    <%= f.collection_select(:intensity_id, Intensity.all, :id, :name, {}, {class:"intensity-select"}) %>
+    <% if @pose.errors.include?(:intensity_id) %>
+       <p style="color: red;"><%= @pose.errors.full_messages_for(:intensity_id).first %>
+     <% end %>
   </div>
 
   <div class="field">
     <%= f.label :image, "Pose Image" %><br />
     <%= f.file_field :image %>
+    <% if @pose.errors.include?(:image) %>
+       <p style="color: red;"><%= @pose.errors.full_messages_for(:image).first %>
+     <% end %>
   </div>
 
   <div class="actions">

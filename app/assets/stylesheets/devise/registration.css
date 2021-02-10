@@ -59,6 +59,10 @@
   margin-top: 10px;
 }
 
+#error_sentence{
+  text-align: center;
+}
+
 
 .registration-main-right{
   flex-grow: 1;
