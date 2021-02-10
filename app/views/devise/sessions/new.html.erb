@@ -15,14 +15,26 @@
    <h4 class="login-title">Log In</h4>
 
  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <%# error-message表示 %>
+     <div class='login-flash-message'>
+       <%= flash[:notice] %>
+       <%= flash[:alert] %>
+     </div>
+   
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <% if resource.errors.include?(:email) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:email).first %>
+      <% end %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
+      <% if resource.errors.include?(:password) %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:password).first %>
+      <% end %>
   </div>
 
   <% if devise_mapping.rememberable? %>

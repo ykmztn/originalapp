@@ -39,7 +39,7 @@
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-     <% if resource.errors.include?(:email) %>
+      <% if resource.errors.include?(:email) %>
       <p style="color: red;"><%= resource.errors.full_messages_for(:email).first %>
       <% end %>
   </div>
