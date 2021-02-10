@@ -62,11 +62,17 @@
 
 .registration-main-right{
   flex-grow: 1;
-  background-color: #ffffff;
-  background-image: url(app/assets/images/door.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  
+}
+
+.door-img{
+  height: 600px;
+  width: 500px;
+  object-fit: cover; 
+
 }
 
 footer{
