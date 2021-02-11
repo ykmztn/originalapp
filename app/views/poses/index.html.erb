@@ -14,10 +14,11 @@
           </div>
 
           <div class="pose-detail">
-           <p><span class="posted-pose-title">ポーズ名 <%= pose.title %></p>
-           <p><span class="posted-pose-detail">効果<%= pose.effect.name %></span></p>
-           <p><span class="posted-pose-detail">強度<%= pose.intensity.name %></span></p>
-           <p><span class="posted-pose-detail">所要時間<%= pose.minute %> min</span></p>
+           <p><span class="posted-pose-title">Pose Name : <%= pose.title %></p>
+           <p><span class="posted-pose-detail">Effect : <%= pose.effect.name %></span></p>
+           <p><span class="posted-pose-detail">Required Time : <%= pose.minute %> min</span></p>
+           <p><span class="posted-pose-detail">Intensity : <%= pose.intensity.name %></span></p>
+
           </div>
          </li>
          <% end %>
@@ -28,16 +29,16 @@
     <h3 class="main-right-title">Search</h3>
       <div class="search-item-select"> 
        <%= search_form_for @p, url: poses_search_path do |f| %>
-        <%= f.label :title_eq, 'ポーズ名 :', class: "search-item-name"%>
+        <%= f.label :title_eq, 'Pose Name :', class: "search-item-name"%>
         <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: '指定なし' %><br>
        <br>
-        <%= f.label :effect_id_eq, '効果 : ', class: "search-item-name" %>
+        <%= f.label :effect_id_eq, 'Effect : ', class: "search-item-name" %>
         <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: '指定なし' %><br>
        <br>
-        <%= f.label :minute_lteq, '所要時間 : ', class: "search-item-name"  %>
+        <%= f.label :minute_lteq, 'Required Time : ', class: "search-item-name"  %>
         <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: '指定なし' %><br>
        <br>
-        <%= f.label :intensity_id_eq, '強度 : ', class: "search-item-name" %>
+        <%= f.label :intensity_id_eq, 'Intensity : ', class: "search-item-name" %>
         <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: '指定なし' %><br>
        <br>
         <%= f.submit 'Search' %>
