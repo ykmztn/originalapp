@@ -52,6 +52,7 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
       <% if resource.errors.include?(:password) %>
       <p style="color: red;"><%= resource.errors.full_messages_for(:password).first %>
+      <p style="color: red;"><%= resource.errors.full_messages_for(:password).second %>
       <% end %>
   </div>
 
