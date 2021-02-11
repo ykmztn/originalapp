@@ -41,7 +41,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :effect, "effect" %>
+    <%= f.label :effect, "Effect" %>
     <%= f.collection_select(:effect_id, Effect.all, :id, :name, {}, {class:"effect-select"}) %>
     <% if @pose.errors.include?(:effect_id) %>
        <p style="color: red;"><%= @pose.errors.full_messages_for(:effect_id).first %>
@@ -53,11 +53,12 @@
     <%= f.text_field :minute %>
     <% if @pose.errors.include?(:minute) %>
        <p style="color: red;"><%= @pose.errors.full_messages_for(:minute).first %>
+       <p style="color: red;"><%= @pose.errors.full_messages_for(:minute).second %>
      <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :intensity, "Intensity  1 (Low) → 5 (High)" %>
+    <%= f.label :intensity, "Intensity" %>
     <%= f.collection_select(:intensity_id, Intensity.all, :id, :name, {}, {class:"intensity-select"}) %>
     <% if @pose.errors.include?(:intensity_id) %>
        <p style="color: red;"><%= @pose.errors.full_messages_for(:intensity_id).first %>
