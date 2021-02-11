@@ -19,4 +19,7 @@ class Pose < ApplicationRecord
     validates :effect_id
   end
 
+  validates :minute, numericality: { only_integer: true },
+                     format: { with: /\A[0-9]\z/}
+
 end
