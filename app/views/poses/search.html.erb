@@ -1,27 +1,55 @@
-<h1>
-  検索結果
-</h1>
-<%# 検索結果の個数で条件分岐 %>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
-    <td>
-    <br>
-    <li>
-    <br>
-      <%= image_tag result.image %>
+<main>
+
+<header class='search-result-page-header'>
+  <div class='header-left'>
+    Do Re: Me
+  </div>
+
+  <div class='header-right'>
+    <%= link_to "Back to Top Page", root_path, class: "back-to-top" %>
+  </div>
+
+</header>
+
+
+<div class="search-result-main">
+ <h4 class="search-result-title">Search Result</h4>
+
+ <%# 検索結果の個数で条件分岐 %> 
+ <% if @results.length !=0 %>
+   <ul class="search-result-wrapper">
+     <% @results.each do |result| %>
+      <li class="found-item">
+      
+      <div class="found-item-img-content">
+      <%= image_tag result.image, class: "search-item-img" %>
+      </div>
+
+      <div class="found-item-detail">
       <br>
-      ポーズ名  <%= result.title %>
+      Pose Name : <%= result.title %>
       <br>
-      効果  <%= result.effect.name %>
+      Effect : <%= result.effect.name %>
       <br>
-      所要時間  <%= result.minute %>  分
+      Required Time : <%= result.minute %>  min
       <br>
-      強度 <%= result.intensity.name %>
+      Intensity : <%= result.intensity.name %>
       <br>
-    </li>
-  <% end %>
-<% else %>
-  該当するポーズはありません
-<% end %>
-<br>
-<%= link_to 'トップページへ戻る', root_path %>
+
+      </div>
+
+      </li>
+     <% end %>
+ <% else %>
+    <div class="sorry-message">
+     We are sorry!! The page you're looking for can't be found.
+    </div>
+ <% end %>
+
+  <%# <%= link_to 'Back to Top Page', root_path %>
+
+</div>
+
+<%= render "shared/footer" %>
+
+</main>
