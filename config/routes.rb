@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "poses#index"
   get 'poses/search'
 
-  resources :poses, only: [:index, :new, :create]
+  resources :poses, only: [:index, :new, :create, :destroy]
   resources :users, only: :show
  
 end

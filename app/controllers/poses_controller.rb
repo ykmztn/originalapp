@@ -1,9 +1,10 @@
 class PosesController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :search_product, only: [:index, :search]
+  before_action :pose_find, only: :destroy
 
   def index
-    @poses = Pose.all.order('created_at DESC')
+    @poses = Pose.includes(:user).order('created_at DESC')
     set_pose_column
   end
 
@@ -24,6 +25,15 @@ class PosesController < ApplicationController
     @results = @p.result.order('created_at DESC')
   end
 
+  def destroy
+    if current_user.id == @pose.user_id
+      @pose.destroy
+      redirect_to user_path
+    else
+      redirect_to user_path(@pose)
+    end
+  end
+
 
   private
 
@@ -38,6 +48,10 @@ class PosesController < ApplicationController
   def set_pose_column
     @pose_title = Pose.select("title").distinct
     @pose_minute = Pose.select("minute").distinct
+  end
+
+  def pose_find
+    @pose = Pose.find(params[:id])
   end
 
 end

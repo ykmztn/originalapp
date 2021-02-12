@@ -20,14 +20,26 @@
   
 
   <ul class="pose-record">
+
+  
        <% @poses.each do |pose| %>
+       
         <li class="my-posted-item">
 
       <div class="my-record-img-content">
        <%= image_tag pose.image, class: "record-item-img" %>
       </div>
       <div class="my-record-detail">
+             <div class="more">
+              <span><%= image_tag 'arrow_top.png' %></span>
+               <ul class="more_list">
+                <li>
+                <%= link_to 'Delete', pose_path(@poses.ids), method: :delete %>
+                </li>
+               </ul>
+             </div>
            <p><span class="my-record-title">Pose name : <%= pose.title %></p>
+             
            <p><span class="my-record-detail">Effect : <%= pose.effect.name %></span></p>
            <p><span class="my-record-detail">Intensity : <%= pose.intensity.name %></span></p>
            <p><span class="my-record-detail">Required Time : <%= pose.minute %> min</span></p>
