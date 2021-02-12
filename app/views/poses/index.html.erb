@@ -30,16 +30,19 @@
       <div class="search-item-select"> 
        <%= search_form_for @p, url: poses_search_path do |f| %>
         <%= f.label :title_eq, 'Pose Name :', class: "search-item-name"%>
-        <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: '指定なし' %><br>
+        <%= f.collection_select :title_eq, @pose_title, :title, :title,  include_blank: 'Not Specified' %><br>
        <br>
         <%= f.label :effect_id_eq, 'Effect : ', class: "search-item-name" %>
-        <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: '指定なし' %><br>
+        <%= f.collection_select :effect_id_eq, Effect.all, :id, :name,  include_blank: 'Not Specified' %><br>
+
+        <%# <%= f.collection_check_boxes :effect_id_eq, Effect.all, :id, :name %>
+
        <br>
         <%= f.label :minute_lteq, 'Required Time : ', class: "search-item-name"  %>
-        <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: '指定なし' %><br>
+        <%= f.collection_select :minute_lteq, @pose_minute, :minute, :minute,  include_blank: 'Not Specified' %><br>
        <br>
         <%= f.label :intensity_id_eq, 'Intensity : ', class: "search-item-name" %>
-        <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: '指定なし' %><br>
+        <%= f.collection_select :intensity_id_eq, Intensity.all, :id, :name,  include_blank: 'Not Specified' %><br>
        <br>
         <%= f.submit 'Search' %>
        <% end %>
