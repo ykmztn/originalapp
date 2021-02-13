@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+#login-all-wrapper{
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
+}
+
 .login-page-header {
   width: 100vw;
   padding: 2vh 15vw;

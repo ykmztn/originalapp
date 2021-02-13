@@ -1,9 +1,12 @@
-* {
-  box-sizing: border-box;
+html,body{
+  height: 100%;
 }
 
 #registration-all-wrapper{
   position: relative;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
 }
 
 .registration-page-header {

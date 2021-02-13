@@ -3,16 +3,15 @@ html,body{
 }
 
 #wrap-all{
-  width: 100%;
   position: relative;
-  height:auto !important;
-  height: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
 }
 
 .registration-page-header {
   width: 100vw;
-  header: 15vh;
+  height: 15vh;
   padding: 2vh 15vw;
   display: flex;
   justify-content: space-between;
@@ -59,13 +58,11 @@ html,body{
 
 
 .pose-record{
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50vh;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 .my-posted-item{
   height: 45vh;
