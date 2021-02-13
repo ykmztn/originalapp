@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+#registration-all-wrapper{
+  position: relative;
+}
+
 .registration-page-header {
   width: 100vw;
   padding: 2vh 15vw;
@@ -31,27 +35,31 @@
 
 .registration-main{
   display: flex;
-  min-height: 80vh;
+  height: fit-content;
   justify-content: center;
   align-items: center;
 }
 
 .registration-main-left{
-  flex-grow: 1;
-
+  width: 60vw;
 }
 
 .registration-title{
   font-size: 30px;
   text-align: center;
-  margin: 10px;
   font-weight: bold;
 }
 
 .field{
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 10px;
+}
+
+.field-radio{
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .actions{
@@ -65,7 +73,7 @@
 
 
 .registration-main-right{
-  flex-grow: 1;
+  width: 40vw;
   display: flex;
   justify-content: flex-end;
   margin: 0;
@@ -73,10 +81,10 @@
 }
 
 .door-img{
-  height: 600px;
-  width: 500px;
+  height: clac (100% - 25vh);
+  width: 40vw;
   object-fit: cover; 
-
+  margin-left: 0;
 }
 
 footer{

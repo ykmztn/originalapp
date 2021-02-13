@@ -74,8 +74,8 @@
 }
 
 .door-img{
-  height: 600px;
-  width: 500px;
+  height: clac (100% - 25vh);
+  width: 40vw;
   object-fit: cover; 
   margin-left: 0;
 }

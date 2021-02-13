@@ -1,3 +1,5 @@
+<body>
+<div id="registration-all-wrapper">
 <header class='registration-page-header'>
   <div class='header-left'>
     Do Re: Me
@@ -9,12 +11,11 @@
 
 </header>
 
-<body>
 <div class="registration-main">
   <div class="registration-main-left">
    <h4 class="registration-title">New Registration</h4>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
    <%# error-message表示 %>
     <% if resource.errors.any? %>
      <div id="error_sentence">
@@ -24,12 +25,12 @@
        <% resource.errors.full_messages.each do |message| %>
           <li><% message %></li>
          <% end %>
-      </ul>
-      </div>
+     </ul>
+     </div>
     <% end %>
 
   <div class="field">
-     <%= f.label :nickname %><br />
+     <%= f.label :nickname %><br/>
      <%= f.text_field :nickname, autofocus: true %>
       <% if resource.errors.include?(:nickname) %>
       <p style="color: red;"><%= resource.errors.full_messages_for(:nickname).first %>
@@ -64,34 +65,25 @@
       <% end %>
   </div>
 
-  <div class="field">
+  <div class="field-radio">
     <%= f.label :gender %><br />
-    <%= f.label :male %>
-    <%= f.radio_button :gender, :male %>
-    <%= f.label :female %>
-    <%= f.radio_button :gender, :female %>
-    <%= f.label :others %>
-    <%= f.radio_button :gender, :others %>
-    <% f.label :noanswer %> No answer
-    <%= f.radio_button :gender, :noanswer %>
+    <%= f.radio_button :gender, :male %> Male
+    <%= f.radio_button :gender, :female %> Female
+    <%= f.radio_button :gender, :others %> Others
+    <%= f.radio_button :gender, :noanswer %> No answer
       <% if resource.errors.include?(:gender) %>
       <p style="color: red;"><%= resource.errors.full_messages_for(:gender).first %>
       <% end %>
       
   </div>
 
-  <div class="field">
+  <div class="field-radio">
     <%= f.label :age %><br />
-    <% f.label :teens %> 10's
-    <%= f.radio_button :age, :teens %>
-    <% f.label :twenties %>  20's
-    <%= f.radio_button :age, :twenties %>
-    <% f.label :thirties %> 30's
-    <%= f.radio_button :age, :thirties %>
-    <% f.label :forties %> 40's
-    <%= f.radio_button :age, :forties %>
-    <% f.label :forties %> Others
-    <%= f.radio_button :age, :more %>
+    <%= f.radio_button :age, :teens %> 10's
+    <%= f.radio_button :age, :twenties %> 20's
+    <%= f.radio_button :age, :thirties %> 30's
+    <%= f.radio_button :age, :forties %> 40's
+    <%= f.radio_button :age, :more %> Others
       <% if resource.errors.include?(:age) %>
       <p style="color: red;"><%= resource.errors.full_messages_for(:age).first %>
       <% end %>
@@ -107,11 +99,14 @@
    <%= image_tag "door.jpg", class:"door-img" %>
   </div>
 
+ </div>
 </div>
+
 
 
 <footer>
 <%= render "shared/footer" %>
 </footer>
 
+</div>
 </body>
