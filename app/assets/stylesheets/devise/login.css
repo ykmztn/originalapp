@@ -31,13 +31,14 @@
 
 .login-main{
   display: flex;
-  min-height: 80vh;
+  min-height: calc (100% - 25vh);
   justify-content: center;
   align-items: center;
 }
 
 .login-main-left{
-  flex-grow: 1;
+  width: 60vw;
+  /* flex-grow: 2; */
   
 }
 
@@ -64,10 +65,11 @@
 }
 
 .login-main-right{
+  width: 40vw;
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-  margin: 0;
+  margin-left: auto;
   
 }
 
@@ -75,7 +77,7 @@
   height: 600px;
   width: 500px;
   object-fit: cover; 
-
+  margin-left: 0;
 }
 
 footer{
