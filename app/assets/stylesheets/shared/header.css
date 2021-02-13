@@ -4,11 +4,11 @@
 
 .index-page-header {
   width: 100vw;
+  height: 15vh;
   padding: 2vh 15vw;
   display: flex;
   justify-content: space-between;
   background-color: #000000;
-  /* background-color: #2f4f4f; */
   color: white;
 }
 
@@ -30,7 +30,7 @@
   margin-left: 20px;
   padding: 8px;
   text-decoration: none;
-  border: solid 2px white;/*線*/
-  border-radius: 10px;/*角の丸み*/
+  border: solid 2px white;
+  border-radius: 10px;
 }
 
