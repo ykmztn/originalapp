@@ -7,6 +7,7 @@
   </div>
 
   <div class='header-right'>
+    <%= link_to "My Page", "/users/#{current_user.id}", class: "user-nav-b" %>
     <%= link_to "Back to Top Page", root_path, class: "back-to-top" %>
   </div>
 
@@ -69,11 +70,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "Pose Image" %><br />
-    <%= f.file_field :image %>
-    <% if @pose.errors.include?(:image) %>
+    <%= f.label :image, "Upload Image", class: "image_input_btn"%> 
+     <% if @pose.errors.include?(:image) %>
        <p style="color: red;"><%= @pose.errors.full_messages_for(:image).first %>
      <% end %>
+     <div id="image-list"></div>
+    <%= f.file_field :image, class: "default-image-form" %>
+   
   </div>
 
   <div class="actions">
