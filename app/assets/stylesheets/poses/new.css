@@ -52,6 +52,12 @@
   margin: 5px;
 }
 
+.new-post-image-field{
+  display: block;
+  text-align: center;
+  margin: 5px;
+}
+
 .image_input_btn{
   display: block;
   background-color: black;
@@ -64,6 +70,11 @@
   color: white;
   text-decoration: none;
   text-align: center;
+}
+
+.new-post-image-field img{
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .default-image-form{
