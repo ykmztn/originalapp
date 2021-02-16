@@ -32,8 +32,8 @@ html,body{
   margin-left: 20px;
   padding: 8px;
   text-decoration: none;
-  border: solid 2px white;/*線*/
-  border-radius: 10px;/*角の丸み*/
+  border: solid 2px white;
+  border-radius: 10px;
 }
 
 .registration-main{
@@ -55,7 +55,6 @@ html,body{
 
 .field{
   text-align: center;
-  /* padding: 10px; */
   margin: 10px;
 }
 

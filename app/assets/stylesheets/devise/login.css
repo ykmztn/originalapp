@@ -32,8 +32,8 @@
   margin-left: 20px;
   padding: 8px;
   text-decoration: none;
-  border: solid 2px white;/*線*/
-  border-radius: 10px;/*角の丸み*/
+  border: solid 2px white;
+  border-radius: 10px;
 }
 
 .login-main{
@@ -45,7 +45,7 @@
 
 .login-main-left{
   width: 60vw;
-  /* flex-grow: 2; */
+
   
 }
 
@@ -83,7 +83,7 @@
 .door-img{
   height: 85vh;
   width: 40vw;
-  object-fit: cover; 
+  object-fit: cover;
   margin-left: 0;
 }
 
