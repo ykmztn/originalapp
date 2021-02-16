@@ -106,7 +106,7 @@ body {
   color: #000000;
 }
 
-/* .more:hover ul.more_list {
+.more:hover ul.more_list {
   display: block
 } 
 
@@ -140,7 +140,7 @@ body {
   color: white;
   text-align: center;
   text-decoration: none;
-} */
+}
 
 .my-record-title{
   font-size: 3vh;
