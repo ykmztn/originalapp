@@ -99,6 +99,7 @@ html,body{
   height: 100px;
   width: 80px;
   text-align: right;
+  color: #000000;
 }
 
 .more:hover ul.more_list{
@@ -130,7 +131,8 @@ html,body{
 }
 
 .more ul.more_list li a:hover {
-  background-color: darkolivegreen;
+  /* background-color: darkolivegreen; */
+  background-color: #c73c41;
   color: white;
   text-align: center;
   text-decoration: none;

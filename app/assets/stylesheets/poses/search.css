@@ -37,6 +37,16 @@
   padding: 20px;
   }
 
+.found-item-title{
+    font-size: 3vh;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .found-item-detail{
+    font-size: 2vh;
+  }
+
 .found-item{
   height: 45vh;
   width: 38vh;
