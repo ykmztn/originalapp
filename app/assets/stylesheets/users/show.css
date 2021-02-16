@@ -1,8 +1,12 @@
-html,body{
+html {
   height: 100%;
 }
 
-#wrap-all{
+body {
+  height: 100%;
+}
+
+#wrap-all {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10vh;
@@ -19,18 +23,18 @@ html,body{
   color: white;
 }
 
-.header-left{
+.header-left {
   font-size: 50px;
 }
 
-.header-right{
+.header-right {
   color: white;
   align-items: center;
   display: flex;
 }
 
 .back-to-top,
-.user-nav-c{ 
+.user-nav-c { 
   color: white;
   justify-content: space-between;
   margin-left: 20px;
@@ -40,12 +44,12 @@ html,body{
   border-radius: 10px;
 }
 
-.main-contents{
+.main-contents {
   display: block;
   position: relative;
 }
 
-.room-title{
+.room-title {
   display: block;
   color: white;
   margin: 15px 70px;
@@ -57,14 +61,14 @@ html,body{
 }
 
 
-.pose-record{
+.pose-record {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
-.my-posted-item{
+.my-posted-item {
   height: 45vh;
   width: 38vh;
   text-align: center;
@@ -72,25 +76,25 @@ html,body{
 
 }
 
-.my-record-img-content{
+.my-record-img-content {
   background-color: whitesmoke;
   border-radius: 10px;
 
 }
 
-.record-item-img{
+.record-item-img {
   height: 28vh;
   width: 28vh;
   border-radius: 10px;
 }
 
-.my-record-detail{
+.my-record-detail {
   position: relative;
   border-radius: 10px;
   background-color: black;
   color: white;
 }
-.more{
+.more {
   position: absolute;
   cursor: pointer;
   top: 20px;
@@ -102,12 +106,12 @@ html,body{
   color: #000000;
 }
 
-.more:hover ul.more_list{
+/* .more:hover ul.more_list {
   display: block
-}
+} 
 
-.more ul.more_list{
-  position: absolute;
+.more ul.more_list { 
+  position: absolute; 
   text-align: left;
   width: 80px;
   right: 0;
@@ -136,7 +140,7 @@ html,body{
   color: white;
   text-align: center;
   text-decoration: none;
-}
+} */
 
 .my-record-title{
   font-size: 3vh;

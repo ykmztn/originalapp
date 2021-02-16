@@ -1,4 +1,4 @@
-#search-all-wrapper{
+#search-all-wrapper {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10vh;
@@ -14,11 +14,7 @@
   color: white;
 }
 
-.search-result-main{
-
-}
-
-.search-result-title{
+.search-result-title {
   display: block;
   color: white;
   margin: 15px 70px;
@@ -29,7 +25,7 @@
   text-align: center;
 }
 
-.search-result-wrapper{
+.search-result-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -37,30 +33,30 @@
   padding: 20px;
   }
 
-.found-item-title{
+.found-item-title {
     font-size: 3vh;
     font-weight: bolder;
     text-align: center;
   }
 
-  .found-item-detail{
+  .found-item-detail {
     font-size: 2vh;
   }
 
-.found-item{
+.found-item {
   height: 45vh;
   width: 38vh;
   text-align: center;
   justify-content: center;
 }
 
-.search-item-img{
+.search-item-img {
   height: 28vh;
   width: 28vh;
   border-radius: 10px;
 }
   
-.found-item-detail{
+.found-item-detail {
   border-radius: 10px;
   background-color: black;
   color: white;
@@ -68,7 +64,7 @@
   justify-content: center;
 }
 
-.sorry-message{
+.sorry-message {
   color: red;
   font-size: 20px;
   text-align: center;

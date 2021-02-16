@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-#login-all-wrapper{
+#login-all-wrapper {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10vh;
@@ -18,16 +18,16 @@
   color: white;
 }
 
-.header-left{
+.header-left {
   font-size: 50px;
 }
 
-.header-right{
+.header-right {
   color: white;
   display: flex;
 }
 
-.back-to-top{ 
+.back-to-top { 
   color: white;
   margin-left: 20px;
   padding: 8px;
@@ -36,57 +36,54 @@
   border-radius: 10px;
 }
 
-.login-main{
+.login-main {
   display: flex;
   min-height: 85vh;
   justify-content: center;
   align-items: center;
 }
 
-.login-main-left{
+.login-main-left {
   width: 60vw;
-
-  
 }
 
-.login-title{
+.login-title {
   font-size: 30px;
   text-align: center;
   margin: 10px;
   font-weight: bold;
 }
 
-.login-flash-message{
+.login-flash-message {
   text-align: center;
   color: red;
 }
 
-.field{
+.field {
   text-align: center;
   margin: 5px;
 }
 
-.actions{
+.actions {
   text-align: center;
   margin: 10px;
 }
 
-.login-main-right{
+.login-main-right {
   width: 40vw;
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
-  
 }
 
-.door-img{
+.door-img {
   height: 85vh;
   width: 40vw;
   object-fit: cover;
   margin-left: 0;
 }
 
-footer{
+footer {
   margin-top: auto;
 }

@@ -1,24 +1,28 @@
-html,body{
+html {
   height: 100%;
 }
 
-#wrap-all{
+body {
+  height: 100%;
+}
+
+#wrap-all {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10vh;
   box-sizing: border-box;
 }
 
-.main-content{
+.main-content {
  display: flex;
  position: relative;
 }
 
-.main-left{
+.main-left {
  flex-grow: 4;
 }
 
-.main-left-title{
+.main-left-title {
   color: white;
   margin: 10px 70px;
   border-radius: 10px;
@@ -27,7 +31,7 @@ html,body{
   text-align: center;
 }
 
-.posts-wrapper{
+.posts-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -35,7 +39,7 @@ html,body{
   padding: 20px;
 }
 
-.posted-item{
+.posted-item {
   height: 45vh;
   width: 38vh;
   text-align: center;
@@ -43,35 +47,35 @@ html,body{
 
 }
 
-.pose-img-content{
+.pose-img-content {
   background-color: whitesmoke;
   border-radius: 10px;
 
 }
 
-.pose__img{
+.pose__img {
   height: 28vh;
   width: 28vh;
   border-radius: 10px;
 }
 
-.pose-detail{
+.pose-detail {
   border-radius: 10px;
   background-color: black;
   color: white;
 }
 
-.posted-pose-title{
+.posted-pose-title {
   font-size: 3vh;
   font-weight: bolder;
   text-align: center;
 }
 
-.posted-pose-detail{
+.posted-pose-detail {
   font-size: 2vh;
 }
 
-.main-right{
+.main-right {
   flex-grow: 1;
   border-radius: 10px;
   background-color: white;
@@ -80,7 +84,7 @@ html,body{
   text-align: center;
 }
 
-.main-right-title{
+.main-right-title {
  color: black;
  font-size: 40px;
  text-align: center;
@@ -89,6 +93,6 @@ html,body{
 }
 
 
-footer{
+footer {
   margin-top: auto;
 }

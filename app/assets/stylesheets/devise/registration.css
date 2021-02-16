@@ -1,8 +1,12 @@
-html,body{
+html {
   height: 100%;
 }
 
-#registration-all-wrapper{
+body {
+  height: 100%;
+}
+
+#registration-all-wrapper {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10vh;
@@ -18,16 +22,16 @@ html,body{
   color: white;
 }
 
-.header-left{
+.header-left {
   font-size: 50px;
 }
 
-.header-right{
+.header-right {
   color: white;
   display: flex;
 }
 
-.back-to-top{ 
+.back-to-top { 
   color: white;
   margin-left: 20px;
   padding: 8px;
@@ -36,59 +40,58 @@ html,body{
   border-radius: 10px;
 }
 
-.registration-main{
+.registration-main {
   display: flex;
   height: fit-content;
   justify-content: center;
   align-items: center;
 }
 
-.registration-main-left{
+.registration-main-left {
   width: 60vw;
 }
 
-.registration-title{
+.registration-title {
   font-size: 30px;
   text-align: center;
   font-weight: bold;
 }
 
-.field{
+.field {
   text-align: center;
   margin: 10px;
 }
 
-.field-radio{
+.field-radio {
   position: relative;
   text-align: center;
   white-space: nowrap;
 }
 
-.actions{
+.actions {
   text-align: center;
   margin-top: 10px;
 }
 
-#error_sentence{
+#error_sentence {
   text-align: center;
 }
 
 
-.registration-main-right{
+.registration-main-right {
   width: 40vw;
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  
 }
 
-.door-img{
+.door-img {
   height: 85vh;
   width: 40vw;
   object-fit: cover; 
   margin-left: 0;
 }
 
-footer{
+footer {
   margin-top: auto;
 }

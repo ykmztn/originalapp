@@ -8,19 +8,18 @@
   color: white;
 }
 
-.header-left{
+.header-left {
   font-size: 50px;
 }
 
-.header-right{
+.header-right {
   color: white;
   align-items: center;
   display: flex;
-
 }
 
 .user-nav-b,
-.user-nav-a{ 
+.user-nav-a {
   color: white;
   justify-content: space-between;
   margin-left: 20px;

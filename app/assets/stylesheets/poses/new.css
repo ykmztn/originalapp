@@ -1,4 +1,4 @@
-#new-post-wrapper{
+#new-post-wrapper {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10vh;
@@ -14,16 +14,16 @@
   color: white;
 }
 
-.header-left{
+.header-left {
   font-size: 50px;
 }
 
-.header-right{
+.header-right {
   color: white;
   display: flex;
 }
 
-.back-to-top{ 
+.back-to-top { 
   color: white;
   margin-left: 20px;
   padding: 8px;
@@ -32,14 +32,14 @@
   border-radius: 10px;
 }
 
-.main{
+.main {
   display: flex;
   min-height: 80vh;
   justify-content: center;
   align-items: center;
 }
 
-.page-heading{
+.page-heading {
   font-size: 30px;
   text-align: center;
   margin: 10px;
@@ -47,18 +47,18 @@
 }
 
 
-.field{
+.field {
   text-align: center;
   margin: 5px;
 }
 
-.new-post-image-field{
+.new-post-image-field {
   display: block;
   text-align: center;
   margin: 5px;
 }
 
-.image_input_btn{
+.image_input_btn {
   display: block;
   background-color: black;
   width: 180px;
@@ -72,22 +72,22 @@
   text-align: center;
 }
 
-.new-post-image-field img{
+.new-post-image-field img {
   max-height: 200px;
   max-width: 200px;
 }
 
-.default-image-form{
+.default-image-form {
   display: none;
 }
 
-.actions{
+.actions {
   text-align: center;
   margin: 10px;
 }
 
 
 
-footer{
+footer {
   margin-top: auto;
 }
