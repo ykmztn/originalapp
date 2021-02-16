@@ -1,5 +1,17 @@
+html,body{
+  height: 100%;
+}
+
+#wrap-all{
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
+}
+
 .main-content{
  display: flex;
+ position: relative;
 }
 
 .main-left{
@@ -16,13 +28,11 @@
 }
 
 .posts-wrapper{
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50vh;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .posted-item{
@@ -34,6 +44,8 @@
 }
 
 .pose-img-content{
+  background-color: whitesmoke;
+  border-radius: 10px;
 
 }
 
@@ -63,7 +75,7 @@
   flex-grow: 1;
   border-radius: 10px;
   background-color: white;
-  height: 60vh;
+  height: 70vh;
   margin: 10px;
   text-align: center;
 }

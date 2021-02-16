@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+#login-all-wrapper{
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
+}
+
 .login-page-header {
   width: 100vw;
   padding: 2vh 15vw;
@@ -31,13 +38,14 @@
 
 .login-main{
   display: flex;
-  min-height: 80vh;
+  min-height: calc (100% - 25vh);
   justify-content: center;
   align-items: center;
 }
 
 .login-main-left{
-  flex-grow: 1;
+  width: 60vw;
+  /* flex-grow: 2; */
   
 }
 
@@ -64,18 +72,19 @@
 }
 
 .login-main-right{
+  width: 40vw;
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-  margin: 0;
+  margin-left: auto;
   
 }
 
 .door-img{
-  height: 600px;
-  width: 500px;
+  height: clac (100% - 25vh);
+  width: 40vw;
   object-fit: cover; 
-
+  margin-left: 0;
 }
 
 footer{

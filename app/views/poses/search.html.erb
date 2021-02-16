@@ -1,4 +1,5 @@
-<main>
+<body>
+<div id="search-all-wrapper">
 
 <header class='search-result-page-header'>
   <div class='header-left'>
@@ -26,9 +27,8 @@
       </div>
 
       <div class="found-item-detail">
-      <br>
-      Pose Name : <%= result.title %>
-      <br>
+
+      <p><span class="found-item-title"><%= result.title %></p>
       Effect : <%= result.effect.name %>
       <br>
       Required Time : <%= result.minute %>  min
@@ -51,5 +51,5 @@
 </div>
 
 <%= render "shared/footer" %>
-
-</main>
+</div>
+</body>
