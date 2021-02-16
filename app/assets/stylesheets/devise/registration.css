@@ -84,7 +84,7 @@ html,body{
 }
 
 .door-img{
-  height: clac (100vh - 25vh);
+  height: unquote(clac (100% - 25vh);
   width: 40vw;
   object-fit: cover; 
   margin-left: 0;
