@@ -38,7 +38,7 @@
 
 .login-main{
   display: flex;
-  min-height: calc (100% - 25vh);
+  min-height: calc (100vh - 25vh);
   justify-content: center;
   align-items: center;
 }
@@ -81,7 +81,7 @@
 }
 
 .door-img{
-  height: clac (100% - 25vh);
+  height: clac (100vh - 25vh);
   width: 40vw;
   object-fit: cover; 
   margin-left: 0;
