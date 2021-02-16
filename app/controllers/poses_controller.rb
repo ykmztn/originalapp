@@ -34,7 +34,6 @@ class PosesController < ApplicationController
     end
   end
 
-
   private
 
   def pose_params
@@ -46,12 +45,11 @@ class PosesController < ApplicationController
   end
 
   def set_pose_column
-    @pose_title = Pose.select("title").distinct
-    @pose_minute = Pose.select("minute").distinct
+    @pose_title = Pose.select('title').distinct
+    @pose_minute = Pose.select('minute').distinct
   end
 
   def pose_find
     @pose = Pose.find(params[:id])
   end
-
 end

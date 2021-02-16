@@ -5,7 +5,7 @@ class Pose < ApplicationRecord
 
   belongs_to :user
   has_many :comments
-  
+
   has_one_attached :image
 
   with_options presence: true do
@@ -20,6 +20,5 @@ class Pose < ApplicationRecord
   end
 
   validates :minute, numericality: { only_integer: true },
-                     format: { with: /\A[0-9]\z/}
-
+                     format: { with: /\A[0-9]\z/ }
 end

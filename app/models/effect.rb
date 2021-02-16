@@ -15,5 +15,4 @@ class Effect < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :poses
-  
-  end
+end
