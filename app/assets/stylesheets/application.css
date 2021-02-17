@@ -14,10 +14,3 @@
  *= require_self
  */
 
- /*ページネーション自体のデザイン*/
-.pagination {
-  text-align: center;
-  justify-content: center;
-  margin:0 auto;
-
-}

@@ -86,7 +86,11 @@ body {
   margin:0 auto;
 }
 
-.pagination>li>a {          
+.pagination>li {
+  display: inline-block; 
+}
+
+.pagination>li>a {
   border: none;     /*枠線をなくす*/
   color: white;   /*文字の色を変える*/
   background-color: black;
