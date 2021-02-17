@@ -22,7 +22,7 @@ class PosesController < ApplicationController
   end
 
   def search
-    @results = @p.result.order('created_at DESC')
+    @results = @p.result.order('created_at DESC').page(params[:page]).per(10)
   end
 
   def destroy
