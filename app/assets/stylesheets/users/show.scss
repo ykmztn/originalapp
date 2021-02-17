@@ -71,8 +71,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 10vh;
+  padding: 4vh;
 }
+
 .my-posted-item {
   height: 45vh;
   width: 38vh;
@@ -95,7 +96,14 @@ body {
   margin-bottom: 2vh;
 }
 
+#my-record-title {
+  border-bottom: solid 1px gray;
+  font-weight: bolder;
+  text-align: center;
+}
+
 .my-record-detail {
+  font-size: 2vh;
   position: relative;
   border-radius: 10px;
   background-color: black;

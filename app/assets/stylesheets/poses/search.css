@@ -34,9 +34,10 @@
   }
 
 .found-item-title {
-    font-size: 3vh;
-    font-weight: bolder;
-    text-align: center;
+  border-bottom: solid 1px gray;
+  font-size: 2vh;
+  font-weight: bolder;
+  text-align: center;
   }
 
   .found-item-detail {

@@ -41,7 +41,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding-top: 4vh;
+  padding-top: 2vh;
   padding-bottom: 10vh;
 }
 
@@ -72,7 +72,8 @@ body {
 }
 
 .posted-pose-title {
-  font-size: 3vh;
+  border-bottom: solid 1px gray;
+  font-size: 2vh;
   font-weight: bolder;
   text-align: center;
 }
