@@ -40,15 +40,24 @@
 
       </li>
      <% end %>
+         
  <% else %>
     <div class="sorry-message">
      We are sorry!! The page you're looking for can't be found.
     </div>
+
+         
+
+   </ul>
  <% end %>
+
 
   <%# <%= link_to 'Back to Top Page', root_path %>
 
 </div>
+         <div class="search-pagination">
+           <%= paginate @results %>
+         </div>
 
 <%= render "shared/footer" %>
 </div>

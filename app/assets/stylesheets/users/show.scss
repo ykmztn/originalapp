@@ -159,6 +159,34 @@ body {
   font-size: 2vh;
 }
 
+.show-pagination{
+  text-align: center;
+  margin:0 auto;
+}
+
+.pagination>li {
+  display: inline-block; 
+}
+
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: white;   /*文字の色を変える*/
+  background-color: black;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #bbc2c9;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+  background-color: #535658;
+  color: white;
+}
+
 
 footer{
   margin-top: auto;

@@ -4,7 +4,7 @@ class PosesController < ApplicationController
   before_action :pose_find, only: :destroy
 
   def index
-    @poses = Pose.includes(:user).order('created_at DESC')
+    @poses = Pose.includes(:user).order('created_at DESC').page(params[:page]).per(6)
     set_pose_column
   end
 
@@ -22,7 +22,7 @@ class PosesController < ApplicationController
   end
 
   def search
-    @results = @p.result.order('created_at DESC')
+    @results = @p.result.order('created_at DESC').page(params[:page]).per(10)
   end
 
   def destroy
