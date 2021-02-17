@@ -32,7 +32,7 @@
               <span><%= image_tag 'arrow_top.png' %></span>
                <ul class="more_list">
                 <li>
-                <%= link_to 'Delete', pose_path(@poses.ids), method: :delete, data: { confirm: 'Delete this data from your room???' }%>
+                <%= link_to 'Delete', pose_path(pose.id), method: :delete, data: { confirm: 'Delete this data from your room???' }%>
                 </li>
                </ul>
              </div>
