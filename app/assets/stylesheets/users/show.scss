@@ -71,11 +71,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 10vh;
 }
 .my-posted-item {
   height: 45vh;
   width: 38vh;
+  padding: 1vw;
   text-align: center;
   justify-content: center;
 
@@ -91,6 +92,7 @@ body {
   height: 28vh;
   width: 28vh;
   border-radius: 10px;
+  margin-bottom: 2vh;
 }
 
 .my-record-detail {
