@@ -91,3 +91,7 @@
 footer {
   margin-top: auto;
 }
+
+.field_with_errors{
+  display: contents;
+}
