@@ -1,3 +1,4 @@
+![Do Re: Me](https://i.gyazo.com/f495d95e99a2fbc5d1be04df9c8b5625.gif)
 
 <a href="https://gyazo.com/f495d95e99a2fbc5d1be04df9c8b5625"><img src="https://i.gyazo.com/f495d95e99a2fbc5d1be04df9c8b5625.gif" alt="Image from Gyazo" width="1000"/></a>
 
