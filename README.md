@@ -1,6 +1,4 @@
-![Do Re: Me](https://i.gyazo.com/f495d95e99a2fbc5d1be04df9c8b5625.gif)
-
-<a href="https://gyazo.com/f495d95e99a2fbc5d1be04df9c8b5625"><img src="https://i.gyazo.com/f495d95e99a2fbc5d1be04df9c8b5625.gif" alt="Image from Gyazo" width="1000"/></a>
+![f495d95e99a2fbc5d1be04df9c8b5625](https://user-images.githubusercontent.com/76562258/108347800-4fe92280-7224-11eb-8a3c-17477b538a75.gif)
 
 # アプリケーション名
   Do Re: Me (ドレミ)  
