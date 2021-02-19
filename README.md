@@ -42,11 +42,14 @@
 
 # 実装した機能についてのGIFと説明  
   *ユーザー登録機能(ラジオボタン/エラー表示)  
-  https://gyazo.com/58acba3738829d58d3b21f1789e62de4  
+  ![ad70f3171165dc332673c5ec214a5933](https://user-images.githubusercontent.com/76562258/108447504-54a0eb80-72a3-11eb-86ed-bcb4017e65f6.gif)
+<br>
   *投稿機能(プレビュー)  
-  https://gyazo.com/575cd6d5bebf892f3dc3b01cf3c4ebe7  
+  ![475231fa435d18921238d7091fccc794](https://user-images.githubusercontent.com/76562258/108447282-f411ae80-72a2-11eb-80b2-1fb02a4086d2.gif)  
+<br>
   *削除機能(モーダル)  
-  https://gyazo.com/901ffd835399ca7ec7244116ceddb76f  
+  ![36177531b3c4f58d5802d601548c970e](https://user-images.githubusercontent.com/76562258/108447017-7e0d4780-72a2-11eb-9cdd-2b43b4fc2d35.gif)  
+
 
 # 実装予定の機能  
   *本番環境での画像のリンク切れを防ぐ実装  
@@ -54,8 +57,8 @@
   *編集機能  
   *いいね機能  
 
-# データベース設計
-  https://user-images.githubusercontent.com/76562258/108312254-c290d880-71f9-11eb-92db-2b44aad3b1ac.mov
+# データベース設計  
+  ![image](https://user-images.githubusercontent.com/76562258/108449322-9da66f00-72a6-11eb-94a6-0deaf6cb5f30.png)  
 
 # テーブル設計
 
