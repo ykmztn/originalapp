@@ -37,10 +37,11 @@
                </ul>
              </div>
            <p><span id="my-record-title"><%= pose.title %></p>
-             
            <p><span class="my-record-detail">Effect : <%= pose.effect.name %></span></p>
            <p><span class="my-record-detail">Intensity : <%= pose.intensity.name %></span></p>
            <p><span class="my-record-detail">Required Time : <%= pose.minute %> min</span></p>
+           <p><i class="fas fa-heart"></i> <%= pose.likes.count %></p>
+
       </div>
         </li>
 
