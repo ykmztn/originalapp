@@ -19,7 +19,24 @@
            <p><span class="posted-pose-detail">Required Time : <%= pose.minute %> min</span></p>
            <p><span class="posted-pose-detail">Intensity : <%= pose.intensity.name %></span></p>
 
+           
+            <p>
+           <% if user_signed_in? %>
+            <% if current_user.already_liked?(pose) %>
+              <%= link_to pose_likes_path(pose), method: :delete do %>
+                <i class="fas fa-heart"></i>
+              <% end %>
+            <% else %>
+              <%= link_to pose_likes_path(pose), method: :post do %> 
+                <i class="far fa-heart"></i>
+              <% end %>
+            <% end %>
+            <%= pose.likes.count %>
+           <% end %>
+           </p>
+
           </div>
+          
          </li>
          <% end %>
        </ul>
