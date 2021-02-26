@@ -28,7 +28,7 @@
   一度ログアウトした場合はログイン画面より再度ログインする。  
 
 # 目指した課題解決  
-  ペルソナ設定  仕事に家事に忙しい20-30代女性  
+  ペルソナ設定  仕事に家事に忙しい20-30代女性。海外旅行が好きで英語を勉強中。  
   ・自分が習得したポーズを思い出したい時に見返すことができる。  
   ・英語の勉強をしたい -> 英語表記にしているため外国籍の方でも使用できる  
   ・短時間でヨガをしたい -> 検索機能を儲けることで今の自分の気分にあったヨガポーズをピックアップすることが可能  
@@ -38,7 +38,7 @@
   *投稿機能 : 自分のヨガポーズを投稿するため。画像のプレビュー機能を追加し、ユーザーが新規投稿時に確認できるようにした。  
   *削除機能 : 自分の不要な投稿を削除するため。モーダルを用いて警告文を表示するようにした。  
   *検索機能 : ユーザーが欲しい情報をピンポイントで呼び出すことで、時間短縮を図るため。時間に関しては指定した時間以下のものが検索されるようになっている  
-  *コメント機能 : ユーザー同士のコミュニケーションを図るため。(今後実装予定)  
+  *いいね機能 : コメントは残さず、煩わしいコミュニケーションを回避するため自分が良いと思った投稿にワンタッチでリアクションだけする。
 
 # 実装した機能についてのGIFと説明  
   *ユーザー登録機能(ラジオボタン/エラー表示)  
@@ -53,9 +53,8 @@
 
 # 実装予定の機能  
   *本番環境での画像のリンク切れを防ぐ実装  
-  *コメント機能  
   *編集機能  
-  *いいね機能  
+
 
 # データベース設計  
   ![image](https://user-images.githubusercontent.com/76562258/108449322-9da66f00-72a6-11eb-94a6-0deaf6cb5f30.png)  
@@ -75,7 +74,7 @@
 ### Association
 
 - has_many :poses
-- has_many :comments
+- has_many :likes
 
 
 ## poses テーブル
@@ -91,13 +90,16 @@
 ### Association
 
 - belongs_to :user
-- has_many :comments
+- has_many :likes
 
 
-## comments テーブル
+## likes テーブル
 
 | Column       | Type       | Options                         |
 | ------------ | ---------- | ------------------------------- |
-| comment      | text       | null: false                     |
-| user         | references | null: false, foreign_key: true  |
-| pose         | references | null: false, foreign_key: true  |
+| user_id      | references | null: false, foreign_key: true  |
+| pose_id      | references | null: false, foreign_key: true  |
+
+### Association
+- belongs_to :user
+- belongs_to :pose
