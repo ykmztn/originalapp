@@ -57,7 +57,7 @@
 
 
 # データベース設計  
-  ![image](https://user-images.githubusercontent.com/76562258/108449322-9da66f00-72a6-11eb-94a6-0deaf6cb5f30.png)  
+  ![doreme](https://user-images.githubusercontent.com/76562258/110897400-b8698200-8340-11eb-889a-ab01c8a3edfc.png)  
 
 # テーブル設計
 
